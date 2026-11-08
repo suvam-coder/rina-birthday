@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: #ffe6f0;
+                font-family: Arial, sans-serif;
+                text-align: center; 
+            }
+            h1 {
+                color: #d6336c;
+                font-size: 42px;
+                margin-bottom: 25px;
+                text-shadow: 0 3px 10px
+                rgba(214, 51, 108, 0.25);
+            }
+            p {
+                font-size: 18px;
+                line-height: 1.8;
+                margin-bottom: 20px;
+            } 
+            .card {
+                background-color: rgba(255, 255, 255, 0.9);
+                max-width: 600px;
+                margin: 80px auto;
+                padding: 40px;
+                border-radius: 25px; 
+                box-shadow: 0 10px 30px
+                rgba(214, 51, 108, 0.25);
+            }
+            .heart {
+                position: fixed;
+                font-size: 25px;
+                animation: float 5s infinite;
+            }
+            @keyframes float {
+                0% {
+                    bottom: -50px;
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    bottom: 100%;
+                    opacity: 0;
+                }
+            }
+            
+            .heart {
+        position: fixed;
+        left: 50%;
+        bottom: 0;
+        font-size: 40px;
+        animation:floatUp 4s linear infinite;
+       }
+      
+       
+        @keyframes floatUp {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+               transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 16px;
+            color: #d6336c;
+            font-style: italic;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 200px;
+            height:200px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px
+            rgba(214, 51, 108, 0.25);
+        }
+        /* Beautiful birthday photo gallery */
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 25px 10px;
+}
+
+.gallery img {
+    width: 220px;
+    max-width: 90%;
+    height: 260px;
+    object-fit: cover;
+
+    border: 8px solid white;
+    border-radius: 12px;
+
+    box-shadow: 0 6px 18px rgba(180, 80, 110, 0.2);
+
+    transition: transform 0.4s ease;
+}
+
+/* Slightly tilted photo frames */
+
+.gallery img:nth-child(1) {
+    transform: rotate(-4deg);
+}
+
+.gallery img:nth-child(2) {
+    transform: rotate(3deg);
+}
+
+.gallery img:nth-child(3) {
+    transform: rotate(-2deg);
+}
+
+/* Hover animation */
+
+.gallery img:hover {
+    transform: translateY(-10px) rotate(0deg) scale(1.05);
+}
+/* Secret birthday letter */
+
+.letter-section {
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.letter-section button {
+    background-color: #d6336c;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 25px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.letter-section button:hover {
+    background-color: #b82558;
+    transform: scale(1.08);
+}
+
+.secret-letter {
+    display: none;
+    background: #fff0f5;
+    padding: 25px;
+    margin: 25px auto;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(200, 100, 130, 0.2);
+    line-height: 1.8;
+    animation: appear 0.7s ease;
+}
+
+.secret-letter.show {
+    display: block;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} /* Mobile responsiveness */
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .secret-letter {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+.music-player {
+  background: #ffe4ef;
+  padding: 20px;
+  margin: 25px auto;
+  width: 85%;
+  max-width: 350px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.music-player button {
+  background: #d6336c;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.surprise-section {
+  text-align: center;
+  margin: 35px auto;
+  padding: 20px;
+}
+
+.surprise-section button {
+  background: #d6336c;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hidden-surprise {
+  display: none;
+  color: #b94e79;
+  font-size: 18px;
+  margin-top: 20px;
+  line-height: 1.7;
+}
+
+.hidden-surprise.show-surprise {
+  display: block;
+}
+        </style>
+        <title>Happy Birthday rina ❤️😁
+        </title>
+    </head>
+    <body>
+        <div class="heart">💗</div>
+        <div class="heart" style="left: 10%">❤️</div>
+        <div class="heart" style="left: 30%">💗</div>
+        <div class="heart" style="left: 50%">💕</div>
+        <div class="heart" style="left: 70%">💖</div>
+        <div class="heart" style="left: 90%">💓</div>
+        
+        <div class="card">
+        <h1>
+            Happy Birthday Babe🎂😘😍
+        </h1>
+        <p>
+            happpy birthday babe 😁💕<p>
+            Even though an angel like you can never really age, you are still 19 today.<p>
+             I hope your day goes as amazing as you ani aja chai i hope you don't have to stand for long time at work and everthing goes smoothly.
+        <p> Ani  hope this year brings you more happiness and good memories  
+        </p><p>BTW Happy Tihar</p><p>Happy 19th, my favorite angel😊</p>
+        <div class="gallery">
+            <img src="photos/photo1.jpg"
+            alt="Our memories 1">
+            <img src="photos/photo2.jpg"
+            alt="Our memories 2">
+            <img src="photos/photo3.jpg"
+            alt="Our memories 3">
+        </div>
+        <div class="letter-section">
+
+    <h2>A little something for you 💌</h2>
+
+    <button onclick="openLetter()">
+        Open My letter 💗
+    </button>
+
+    <div class="secret-letter" id="myLetter">
+
+        <h3>Dear Rina ❤️</h3>
+
+        <p>
+            I know life has been pretty tough for you last couple of months ani you couldn't even habe a day break even when you're sick.
+            Ani watching you grow makes me feel happy , proud , motivating but i feel like i should be more caring on this these and support you in you struggle but i'm a baka yk 
+            i couldn't find any other ways to cheer for you so, i'm thinking to remind you that i will be your bigggesttt cheer leader /fan from Day1 till the last breath through this letter.
+
+        </p>
+
+        <p>
+            Thank you for being part of my life.
+            I hope you achieve everything you've
+            ever dreamed of.
+        </p>
+
+        <p>
+            Keep smiling, keep growing and
+            keep loving yourself and don't forget to love me tooopp😭 💗
+        </p>
+
+        <p>your bhondu🚩 </p>
+
+    </div>
+</div>
+<div class="music-player">
+  <p>🎵 A song for you</p>
+  <p>About You - The 1975</p>
+
+  <audio id="birthdayMusic" loop>
+    <source src="music/about-you.mp3" type="audio/mpeg">
+  </audio>
+
+  <button onclick="toggleMusic()" id="musicButton">
+    ▶ Play Music
+  </button>
+</div>
+<div class="surprise-section">
+  <button onclick="revealSurprise()">
+    One last thing... 💗
+  </button>
+
+  <p id="surpriseMessage" class="hidden-surprise">
+    You make my world a little more beautiful
+    just by being in it. Happy Birthday, Rina ❤️
+  </p>
+</div>
+       <div class="footer">
+            Made with love for Rina😁
+        </div>
+    </div>
+    <script>
+        function openLetter() {
+            document.getElementById("myLetter")
+            .classList.toggle("show");
+        }
+        function toggleMusic() {
+  const music = document.getElementById("birthdayMusic");
+  const button = document.getElementById("musicButton");
+
+  if (music.paused) {
+    music.play();
+    button.innerHTML = "⏸ Pause Music";
+  } else {
+    music.pause();
+    button.innerHTML = "▶ Play Music";
+  }
+}
+function revealSurprise() {
+  document.getElementById("surpriseMessage")
+    .classList.toggle("show-surprise");
+}
+    </script>
+    </body>
+</html>
